@@ -1,0 +1,6 @@
+{
+  "appTitle": "sticker_chart",
+  "@appTitle": {
+    "description": "The title of the application"
+  }
+}
