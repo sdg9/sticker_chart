@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 
 import '../settings/settings_view.dart';
-import 'profile_item.dart';
-import 'sample_item_details_view.dart';
+import 'child_profile.dart';
+import 'sticker_selection_grid_view.dart';
 
 /// Displays a list of SampleItems.
-class SampleItemListView extends StatelessWidget {
-  const SampleItemListView({
+class ChildSelectionView extends StatelessWidget {
+  const ChildSelectionView({
     super.key,
     this.items = const [
-      ProfileItem(1, 'Jameson', Icons.boy),
-      ProfileItem(2, 'Avery', Icons.girl_outlined),
+      ChildProfile(1, 'Jameson', Icons.boy),
+      ChildProfile(2, 'Avery', Icons.girl_outlined),
       // SampleItem(3, 'Kid 3', Icons.child_care),
     ],
   });
 
   static const routeName = '/';
 
-  final List<ProfileItem> items;
+  final List<ChildProfile> items;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +63,7 @@ class SampleItemListView extends StatelessWidget {
                 // the app after it has been killed while running in the
                 // background, the navigation stack is restored.
                 Navigator.restorablePushNamed(
-                    context, SampleItemDetailsView.routeName,
+                    context, StickerSelectionGridView.routeName,
                     arguments: 'profile_${item.id}');
               });
         },

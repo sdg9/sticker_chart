@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-import 'sample_feature/sample_item_details_view.dart';
-import 'sample_feature/profile_item_list_view.dart';
+import 'sticker_feature/sticker_selection_grid_view.dart';
+import 'sticker_feature/child_selection_view.dart';
 import 'settings/settings_controller.dart';
 import 'settings/settings_view.dart';
 
@@ -69,13 +69,12 @@ class MyApp extends StatelessWidget {
                 switch (routeSettings.name) {
                   case SettingsView.routeName:
                     return SettingsView(controller: settingsController);
-                  case SampleItemDetailsView.routeName:
-                    // return const SampleItemDetailsView(profileId: 'some_profile_id');
+                  case StickerSelectionGridView.routeName:
                     final String profileId = routeSettings.arguments as String;
-                    return SampleItemDetailsView(profileId: profileId);
-                  case SampleItemListView.routeName:
+                    return StickerSelectionGridView(profileId: profileId);
+                  case ChildSelectionView.routeName:
                   default:
-                    return const SampleItemListView();
+                    return const ChildSelectionView();
                 }
               },
             );

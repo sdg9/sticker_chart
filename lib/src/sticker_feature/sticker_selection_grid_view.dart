@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SampleItemDetailsView extends StatefulWidget {
+class StickerSelectionGridView extends StatefulWidget {
   final String profileId;
 
-  const SampleItemDetailsView({super.key, required this.profileId});
+  const StickerSelectionGridView({super.key, required this.profileId});
 
-  static const routeName = '/sample_item';
+  static const routeName = '/sticker_selection';
 
   @override
-  _SampleItemDetailsViewState createState() => _SampleItemDetailsViewState();
+  _StickerSelectionGridViewState createState() =>
+      _StickerSelectionGridViewState();
 }
 
-class _SampleItemDetailsViewState extends State<SampleItemDetailsView> {
+class _StickerSelectionGridViewState extends State<StickerSelectionGridView> {
   final List<IconData> _selectedIcons = List.filled(20, Icons.add);
 
   @override
